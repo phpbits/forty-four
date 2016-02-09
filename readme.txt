@@ -13,29 +13,30 @@ Add a super Lightweight 404 Page aside from automatic 404 to 301 redirect for SE
 == Description ==
 
 <strong>Did you know that : </strong>
+
 * It's best to use 301 redirects for better SEO
 * It's okay to serve a 404 when the page doesn't exist anymore
 * 404s should not always be redirected.
 * 404s should not be redirected globally to the home page.
 * 404 pages are normal :)
 
-If you want to improve your 404 page handling and avoid SEO effects on your "404 Page Not Found" links install this plugin and it'll take of your 404s ;)
+If you want to improve your 404 page handling and avoid SEO effects on your "404 Page Not Found" links install this plugin and it'll take care of your 404s ;)
 
-<h3>Why does Forty Four stands out from the rest?</h3>
+<h3>Why does Forty Four stand out from the rest?</h3>
 
-<strong>Super Lightweight 404 Page</strong>
+<strong>Super Lightweight 404 Page</strong><br />
 Forty Four Plugin creates custom page design that you can modify easily on <em>Appearance > 404 Page</em>. It doesn't load the unnecessary scripts, css, images and other links to 404 page. Visitors shouldn't have to wait too long for the page to load if it's not available! By doing this approach you'll lessen the requests and loading time. 
 
-<strong>Modern 404 Page Design</strong>
+<strong>Modern 404 Page Design</strong><br />
 If you want better, responsive and modern 404 page design you should definitely install Forty Four! Of course you can upload your own background image and change the color scheme! Time to ditch your default theme 404 page ;)
 
-<strong>Visit Logs</strong>
+<strong>Visit Logs</strong><br />
 All 404 links visited on your sites are available on <em>Appearance > 404 Page: Logs</em>. You can check the 404 links and how many times the pages were viewed. 
 
-<strong>Custom Redirects</strong>
+<strong>Custom Redirects</strong><br />
 You can also add custom redirect for each links on <em>Appearance > 404 Page: Logs</em>. Not just 301 which is very recommended for SEO purposes, 302 and 307 redirect type is also available.
 
-<strong>and more!</strong>
+<strong>and more!</strong><br />
 There are already upcoming features under development. Will be very happy to hear your suggestions too!
 
 If you like to contribute, report issue or have suggestions, you can find the development version on <a href="https://github.com/phpbits/forty-four" target="_blank">Github</a>.
