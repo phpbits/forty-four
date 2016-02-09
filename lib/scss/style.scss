@@ -1,0 +1,252 @@
+@import 'compass';
+
+$color : #fff;
+$desktop : 769px;
+$tablet : 768px;
+$mobile : 520px;
+*{
+	@include box-sizing( border-box );
+}
+
+@font-face {
+  font-family: 'fontello-search';
+  src: url('../font/fontello.eot?88763045');
+  src: url('../font/fontello.eot?88763045#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?88763045') format('woff'),
+       url('../font/fontello.ttf?88763045') format('truetype'),
+       url('../font/fontello.svg?88763045#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body.error404{
+	height: 100%;
+	min-height: 100vh;
+	width: 100%;
+	background: #fff url('../images/cover.jpg') center center no-repeat;
+	@include background-size(cover);
+	color: $color;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Muli', sans-serif;
+	font-size: 1em;
+	line-height: 1.4em;
+	font-weight: 300;
+	h2,h3,h4,h5,h6{
+		font-weight: 400;
+		font-size: 1.8em;
+		line-height: 1.24em;
+		margin: 0.83em 0px;
+	}
+	h1{
+		font-size: 6rem;
+		line-height: 6rem;
+		font-weight: 300;
+		margin: 0.2em 0px;
+	}
+	h3{
+		font-size: 1.6em;
+	}
+	h4{
+		font-size: 1.25em;
+	}
+	h5{
+		font-size: 1.1em;
+	}
+	h6{
+		font-size: 1em;
+	}
+	hr{
+		width: 150px;
+		border: 0px;
+		height: 1px;
+		background: rgba( 255,255,255,0.5 );
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	a{
+		color: #fff;
+	}
+	p{
+		&.gohome{
+			font-size: 0.9em;
+			a{
+				text-decoration: none;
+				color: #fff;
+				@include inline-block;
+				&:hover{
+					border-bottom: 1px solid #fff;
+				}
+			}
+		}
+	}
+	input:focus {outline: none; }
+	
+	.search404{
+		width: 75%;
+		margin: 30px auto;
+		position: relative;
+		input[type="text"]{
+			width: 100%;
+			background: transparent;
+			border: 1px solid #fff;
+			padding: 15px 70px 15px 20px;
+			height: 45px;
+			font-size: 14px;
+			@include border-radius( 25px );
+		}
+		button{
+			font-size: 18px;
+			background: transparent;
+			border: 0px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+
+			@include transition-property(all);
+			@include transition-duration(0.16s);
+			@include transition-timing-function(ease-in-out);
+			&:hover{
+				@include transform(scale(1.25));
+			}
+		}
+	}
+	.search-icon
+    {
+      font-family: "fontello-search";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+
+    //add text shadow
+    .text-shadow-on, .text-shadow-on input{
+    	@include text-shadow( 1px 1px 0px #0b364b );
+    }
+}
+.container404{
+	position: relative;
+	max-width: 1200px;
+	margin: 0px auto;
+	z-index: 50;
+	display: table;
+	height: 100%;
+	min-height: 100vh;
+	height: 100%;
+	.content404{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 50px 120px 50px;
+	}
+}
+
+//WordPress Editor
+em,i{
+	font-style: italic;
+}
+strike, del {
+    text-decoration: line-through;
+}
+blockquote{
+	padding: 20px;
+	margin: 0px;
+	font-size: 1.2em;
+	font-weight: 600;
+	font-style: italic;
+}
+ul, ol{
+	text-align: left;
+}
+
+//media queries
+@media (max-width: $tablet + 1){
+	.container404{
+		.content404{
+			padding: 50px 60px;
+		}
+	}
+}
+@media (max-width: $mobile + 1){
+	.container404{
+		min-height: 100%;
+		.content404{
+			padding: 25px 20px;
+		}
+	}
+	body.error404{
+		// font-size: 0.95em;
+		// line-height: 1.4em;
+	
+		h1{
+			font-size: 5.25rem;
+			line-height: 0.9em;
+			margin: 0.12em 0px;
+		}
+		h2,h3,h4,h5,h6{
+			margin: 0.25em 0px;
+		}
+		hr{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		p{
+			margin: 0.75em 0px;
+		}
+
+		header{
+			#navbar{
+				min-height: 50px;
+				.fluid-menu{
+					top: 25px;
+					right: 50%;
+					width: 100%;
+					text-align: center;
+				}
+				.open-nav, .close-nav{
+					margin-right: -30px;
+				}
+			}
+		}
+		.search404{
+			width: 95%;
+			margin: 18px auto;
+			input[type="text"]{
+				padding: 15px 30px 15px 20px;
+			}
+			#searchsubmit{
+				padding: 1px 5px;
+				padding: 2px 5px 0px;
+			}
+		}
+
+	}
+}

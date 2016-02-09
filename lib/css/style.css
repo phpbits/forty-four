@@ -1,0 +1,48 @@
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+@font-face { font-family: 'fontello-search'; src: url("../font/fontello.eot?88763045"); src: url("../font/fontello.eot?88763045#iefix") format("embedded-opentype"), url("../font/fontello.woff?88763045") format("woff"), url("../font/fontello.ttf?88763045") format("truetype"), url("../font/fontello.svg?88763045#fontello") format("svg"); font-weight: normal; font-style: normal; }
+
+body.error404 { height: 100%; min-height: 100vh; width: 100%; background: white url("../images/cover.jpg") center center no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; color: white; text-align: center; margin: 0px; padding: 0px; font-family: 'Muli', sans-serif; font-size: 1em; line-height: 1.4em; font-weight: 300; }
+body.error404 h2, body.error404 h3, body.error404 h4, body.error404 h5, body.error404 h6 { font-weight: 400; font-size: 1.8em; line-height: 1.24em; margin: 0.83em 0px; }
+body.error404 h1 { font-size: 6rem; line-height: 6rem; font-weight: 300; margin: 0.2em 0px; }
+body.error404 h3 { font-size: 1.6em; }
+body.error404 h4 { font-size: 1.25em; }
+body.error404 h5 { font-size: 1.1em; }
+body.error404 h6 { font-size: 1em; }
+body.error404 hr { width: 150px; border: 0px; height: 1px; background: rgba(255, 255, 255, 0.5); margin-top: 20px; margin-bottom: 20px; }
+body.error404 a { color: #fff; }
+body.error404 p.gohome { font-size: 0.9em; }
+body.error404 p.gohome a { text-decoration: none; color: #fff; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; }
+body.error404 p.gohome a:hover { border-bottom: 1px solid #fff; }
+body.error404 input:focus { outline: none; }
+body.error404 .search404 { width: 75%; margin: 30px auto; position: relative; }
+body.error404 .search404 input[type="text"] { width: 100%; background: transparent; border: 1px solid #fff; padding: 15px 70px 15px 20px; height: 45px; font-size: 14px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; -o-border-radius: 25px; border-radius: 25px; }
+body.error404 .search404 button { font-size: 18px; background: transparent; border: 0px; position: absolute; top: 10px; right: 10px; -webkit-transition-property: all; -moz-transition-property: all; -o-transition-property: all; transition-property: all; -webkit-transition-duration: 0.16s; -moz-transition-duration: 0.16s; -o-transition-duration: 0.16s; transition-duration: 0.16s; -webkit-transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; }
+body.error404 .search404 button:hover { -webkit-transform: scale(1.25); -moz-transform: scale(1.25); -ms-transform: scale(1.25); -o-transform: scale(1.25); transform: scale(1.25); }
+body.error404 .search-icon { font-family: "fontello-search"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: inherit; width: 1em; margin-right: .2em; text-align: center; /* opacity: .8; */ /* For safety - reset parent styles, that can break glyph codes*/ font-variant: normal; text-transform: none; /* fix buttons height, for twitter bootstrap */ line-height: 1em; /* Animation center compensation - margins should be symmetric */ /* remove if not needed */ margin-left: .2em; /* You can be more comfortable with increased icons size */ /* font-size: 120%; */ /* Font smoothing. That was taken from TWBS */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; /* Uncomment for 3D effect */ /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+body.error404 .text-shadow-on, body.error404 .text-shadow-on input { text-shadow: 1px 1px 0px #0b364b; }
+
+.container404 { position: relative; max-width: 1200px; margin: 0px auto; z-index: 50; display: table; height: 100%; min-height: 100vh; height: 100%; }
+.container404 .content404 { display: table-cell; vertical-align: middle; padding: 50px 120px 50px; }
+
+em, i { font-style: italic; }
+
+strike, del { text-decoration: line-through; }
+
+blockquote { padding: 20px; margin: 0px; font-size: 1.2em; font-weight: 600; font-style: italic; }
+
+ul, ol { text-align: left; }
+
+@media (max-width: 769px) { .container404 .content404 { padding: 50px 60px; } }
+@media (max-width: 521px) { .container404 { min-height: 100%; }
+  .container404 .content404 { padding: 25px 20px; }
+  body.error404 h1 { font-size: 5.25rem; line-height: 0.9em; margin: 0.12em 0px; }
+  body.error404 h2, body.error404 h3, body.error404 h4, body.error404 h5, body.error404 h6 { margin: 0.25em 0px; }
+  body.error404 hr { margin-top: 10px; margin-bottom: 10px; }
+  body.error404 p { margin: 0.75em 0px; }
+  body.error404 header #navbar { min-height: 50px; }
+  body.error404 header #navbar .fluid-menu { top: 25px; right: 50%; width: 100%; text-align: center; }
+  body.error404 header #navbar .open-nav, body.error404 header #navbar .close-nav { margin-right: -30px; }
+  body.error404 .search404 { width: 95%; margin: 18px auto; }
+  body.error404 .search404 input[type="text"] { padding: 15px 30px 15px 20px; }
+  body.error404 .search404 #searchsubmit { padding: 1px 5px; padding: 2px 5px 0px; } }

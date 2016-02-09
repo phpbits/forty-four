@@ -1,0 +1,118 @@
+/* Layout options styles ----------- */
+
+.fortyfourwp-layout-selector input {
+	display: none;
+	text-align: center;
+}
+
+.fortyfourwp-layout-selector input#default-layout {
+	display: inline;
+}
+
+.fortyfourwp-layout-selector label.box {
+	display: block;
+	float: left;
+	margin: 10px 10px 10px 0;
+	text-align: center;
+}
+
+.fortyfourwp-layout-selector label.box-last{
+	margin-right: 0px;
+}
+
+.fortyfourwp-layout-selector label.box img {
+	border: 3px solid transparent;
+	margin-bottom: 5px;
+	max-width: 200px;
+}
+
+.fortyfourwp-layout-selector label.box img:hover {
+	border: 3px solid #ddd;
+}
+
+.fortyfourwp-layout-selector label.box.selected img {
+	border: 3px solid #666;
+}
+#background_image_remove{
+	display: none;
+}
+
+.fortyfourwp-stats-head td.gotolink{
+	width: 115px;
+  text-align: left;
+  font-size: 12px;
+}
+.fortyfourwp-stats-head td.gotolink a{
+	text-decoration: none;
+}
+.fortyfourwp-stats-head td, .fortyfourwp-stats-head th{
+	padding-left: 0px;
+	padding-top: 0px;
+}
+
+#fortyfourwp-stats-meta-box-container .postbox .inside{
+	margin: 0px;
+	padding: 0px;
+}
+#fortyfourwp-stats-meta-box-container .postbox .inside table{
+	border: 0px;
+}
+
+#fortyfourwp-stats-meta-box-container .postbox-container td, #fortyfourwp-stats-meta-box-container .postbox-container th{
+	height: 22px;
+	font-size: 11px;
+	padding: 0 10px;
+}
+#fortyfourwp-stats-meta-box-container .postbox-container th{
+	font-weight: 600;
+}
+#fortyfourwp-stats-meta-box-container .postbox-container td span {
+    position: relative;
+    top: 2px;
+
+		text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		-icab-text-overflow: ellipsis;
+		-khtml-text-overflow: ellipsis;
+		-moz-text-overflow: ellipsis;
+		-webkit-text-overflow: ellipsis;
+		display: inline-block;
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+}
+#fortyfourwp-stats-meta-box-container .statsReferrer{
+	table-layout: fixed;
+	line-height: 1em !important;
+	width: 100% !important;
+}
+#fortyfourwp-stats-meta-box-container .statsReferrer .views{
+	width: 65px;
+	padding: 0 10px 0 0 !important;
+	text-align: right;
+}
+table td.fortyfourwp-redirect{
+	width: 190px;
+    text-align: center;
+}
+select.fortyfourwp-redirect-type{
+	display: none;
+}
+.fortyfourwp-save{
+	display: none;
+}
+.fortyfourwp-visit-more{
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size: 11px;
+}
+span.fortyfourwp-total-visits{
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	padding: 8px 10px 15px;
+}
+span.fortyfourwp-total-visits span{
+	font-weight: 700;
+}
