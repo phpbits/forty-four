@@ -32,19 +32,23 @@ class FORTYFOURWP_API_Settings {
 	}
 
 	function on_load_page(){
-		wp_enqueue_script( 'common' );
-		wp_enqueue_script( 'wp-lists' );
-		wp_enqueue_script( 'postbox' );
-		wp_enqueue_media();
-		add_thickbox();
 
-		wp_enqueue_script(
-			'fortyfourwp-admin',
-			plugins_url('../lib/js/jquery-admin-settings.js', __FILE__ ),
-			array( 'jquery','wp-color-picker' ),
-			'',
-			true
-		);
+		if( isset( $_GET['page'] ) && $_GET['page'] == 'fortyfourwp_opts' ){
+			wp_enqueue_script( 'common' );
+			wp_enqueue_script( 'wp-lists' );
+			wp_enqueue_script( 'postbox' );
+			wp_enqueue_media();
+			add_thickbox();
+
+		
+			wp_enqueue_script(
+				'fortyfourwp-admin',
+				plugins_url('../lib/js/jquery-admin-settings.js', __FILE__ ),
+				array( 'jquery','wp-color-picker' ),
+				'',
+				true
+			);
+		}
 
 		wp_localize_script( 'fortyfourwp-admin', 'fortyfourwp_vars', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
@@ -57,7 +61,7 @@ class FORTYFOURWP_API_Settings {
 	    	'20130524',
 	    	'all'
 	    );
-    wp_enqueue_style( 'fortyfourwp-settings' );
+    	wp_enqueue_style( 'fortyfourwp-settings' );
 
 		$this->current_tab = isset( $_GET['tab'] ) ? $_GET['tab'] : $this->general_settings_key;
 

@@ -5,7 +5,7 @@
   Plugin URI: http://codecanyon.net/item/wordpress-ultimate-404-plugin/5130642?ref=phpbits
   Description: Very Lightweight Plugin for Better 404 Page Management! Add custom 301 redirect for SEO purposes, check logs & customize the design and content.
   Author: phpbits
-  Version: 1.0
+  Version: 1.1
   Author URI: http://phpbits.net/
 
   Text Domain: forty-four
