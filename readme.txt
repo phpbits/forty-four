@@ -68,6 +68,9 @@ e.g.
 
 == Changelog ==
 
+= 1.1 =
+* Fix Conflict with Featured Image thanks to technkl
+
 = 1.0 =
 * Initial Plugin release
 
