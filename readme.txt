@@ -68,8 +68,11 @@ e.g.
 
 == Changelog ==
 
+= 1.2 =
+* Fix Delete Bug thanks to @xtel.cz
+
 = 1.1 =
-* Fix Conflict with Featured Image thanks to technkl
+* Fix Conflict with Featured Image thanks to @technkl
 
 = 1.0 =
 * Initial Plugin release
