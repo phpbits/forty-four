@@ -281,21 +281,46 @@ if( !function_exists( 'fortyfourwp_get_data' ) ){
 *@return bool Whether the log was successfully deleted.
 */
 if( !function_exists( 'fortyfourwp_delete_data' ) ){
-    function fortyfourwp_delete_data( $data_id ){
+    function fortyfourwp_delete_data( $data_id, $type = '' ){
         global $wpdb;
+        $sql = '';
+        switch ( $type ) {
+            case 'url':
+                //Delete Logs per Url
+                $data_id = absint($data_id);
+                if( empty($data_id) )
+                     return false;
 
-        //Log ID must be positive integer
-        $data_id = absint($data_id);
-        if( empty($data_id) )
-             return false;
+                $data = fortyfourwp_get_data(
+                            array(
+                                'fields'        => array(
+                                                    'url',
+                                                ), 
+                                'where'         => 'id', 
+                                'keyword'       => $data_id, 
+                                'items'         => 1,
+                            )
+                        );
+                if(  isset( $data[0]->url ) && !empty( $data[0]->url ) ){
+                    $sql = $wpdb->prepare("DELETE from {$wpdb->fortyfour_logs} WHERE url = '%s'", $data[0]->url);
+                }
+                break;
+            
+            default:
+                //Log ID must be positive integer
+                $data_id = absint($data_id);
+                if( empty($data_id) )
+                     return false;
 
-        do_action('fortyfourwp_delete_data',$data_id);
-        $sql = $wpdb->prepare("DELETE from {$wpdb->fortyfour_logs} WHERE id = %d", $data_id);
+                do_action('fortyfourwp_delete_data',$data_id);
+                $sql = $wpdb->prepare("DELETE from {$wpdb->fortyfour_logs} WHERE id = %d", $data_id);
+                break;
+        }
 
         if( !$wpdb->query( $sql ) )
              return false;
 
-        do_action('fortyfourwp_deleted_log',$data_id);
+        // do_action('fortyfourwp_deleted_log',$data_id);
 
         return true;
     }

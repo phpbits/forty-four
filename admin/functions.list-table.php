@@ -195,7 +195,7 @@ class FORTYFOURWP_List_Table extends WP_List_Table {
 		        
 		        foreach ( $entry_id as $id ) {
 		            $id = absint( $id );
-		            fortyfourwp_delete_data( $id );
+		            fortyfourwp_delete_data( $id, 'url' );
 		        }
 		        return $notices = '<div id="message" class="updated below-h2"><p>'. count($entry_id) . __( ' Logs Successfully Deleted.','wp-reviewr') .'</p></div>';
 		    }
