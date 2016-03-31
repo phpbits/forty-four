@@ -72,7 +72,22 @@ if( !class_exists( 'FORTYFOURWP_VISITS' ) ){
 				$this->url                   = $post->url;
 				$this->referrer              = $post->referrer;
 				$this->alternative_keyword   = $post->alternative_keyword;
-				$this->redirect_url          = $post->redirect_url;
+
+				$latest = fortyfourwp_get_data(
+                    array(
+                        'fields'        => array(
+                                            'redirect_url',
+                                        ), 
+                        'where'         => 'url', 
+                        'keyword'       => $post->url, 
+                        'orderby'       => 'access_date',
+                        'order'         => 'desc' , 
+                        'items'         => 1
+                    )
+                );
+
+                $this->redirect_url 	= isset( $latest[0]->redirect_url ) ? $latest[0]->redirect_url : '';
+
 				$this->ip                    = $post->ip;
 				$this->access_date           = $post->access_date;
 				$this->total                 = $post->total;

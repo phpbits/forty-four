@@ -67,7 +67,7 @@ if( !function_exists( 'fortyfourwp_ajax' ) ){
     			<tbody>
 	    			<tr valign="top">
 	    				<td colspan="2">
-	              			<input type="text" class="widefat" readonly="readonly" value="<?php echo isset( $data[0]->url ) ? esc_url( home_url( $data[0]->url ) ) : ''; ?>" />
+	              			<input type="text" class="widefat fortyfourwp-v-url" data-url="<?php echo $data[0]->url;?>" readonly="readonly" value="<?php echo isset( $data[0]->url ) ? esc_url( home_url( $data[0]->url ) ) : ''; ?>" />
 	    				</td>
 						<td class="gotolink"><a href="<?php echo isset( $data[0]->url ) ? esc_url( home_url( $data[0]->url ) ) : ''; ?>" target="_blank"><?php _e( 'Go to Link', 'forty-four' ); ?></a></td>
 	    			</tr>
@@ -137,7 +137,7 @@ add_action('wp_ajax_fortyfourwp_saveredirect', 'fortyfourwp_saveredirect');
 function fortyfourwp_saveredirect(){
 	if($_REQUEST['action'] == "fortyfourwp_saveredirect" && isset($_REQUEST['id']) && isset($_REQUEST['redirect']) ){
 		$redirect = ( !empty( $_REQUEST['redirect'] ) ) ? fortyfourwp_addhttp( sanitize_text_field( $_REQUEST['redirect'] ) ) : '';
-		echo fortyfourwp_update_data( sanitize_text_field( $_REQUEST['id'] ) , $data = array("redirect_url" => $redirect , "redirect_type" => sanitize_text_field( $_REQUEST['type'] ) ) );
+		echo fortyfourwp_update_data( sanitize_text_field( $_REQUEST['id'] ) , $data = array("redirect_url" => $redirect , "redirect_type" => sanitize_text_field( $_REQUEST['type'] ) ), array( 'type' => 'redirect_url', 'url' => sanitize_text_field( $_REQUEST['url'] ) ) );
 	}
 	
 	die();

@@ -66,7 +66,7 @@ if( !function_exists( 'fortyfourwp_insert_data' ) ){
 *@return bool Whether the log was successfully updated.
 */
 if( !function_exists( 'fortyfourwp_update_data' ) ){
-    function fortyfourwp_update_data( $id, $data=array() ){
+    function fortyfourwp_update_data( $id, $data = array(), $params = null ){
         global $wpdb;
 
         //Log ID must be positive integer
@@ -84,8 +84,26 @@ if( !function_exists( 'fortyfourwp_update_data' ) ){
         $data_keys = array_keys($data);
         $column_formats = array_merge(array_flip($data_keys), $column_formats);
 
+        if( !empty( $params ) && is_array( $params ) ){
+            if( isset( $params['type'] ) && 'redirect_url' == $params['type'] ){
+                $latest = fortyfourwp_get_data(
+                    array(
+                        'fields'        => array(
+                                            'id',
+                                        ), 
+                        'where'         => 'url', 
+                        'keyword'       => $params['url'], 
+                        'orderby'       => 'access_date',
+                        'order'         => 'desc' , 
+                        'items'         => 1
+                    )
+                );
+                $id = absint( $latest[0]->id );
+            }
+        }
+
         if ( false === $wpdb->update( $wpdb->fortyfour_logs, $data, array( 'id'=>$id ), $column_formats ) ) {
-             return false;
+            return false;
         }
 
         return true;
