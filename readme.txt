@@ -68,6 +68,9 @@ e.g.
 
 == Changelog ==
 
+= 1.3 =
+* Fix Saving issue with redirect url thanks to @davebon for reporting
+
 = 1.2 =
 * Fix Delete Bug thanks to @xtel.cz
 
