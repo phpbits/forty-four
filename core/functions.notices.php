@@ -6,7 +6,13 @@ if( !class_exists( 'FORTYFOURWP_notices' ) ):
 class FORTYFOURWP_notices {
     public function  __construct() {
         if ( is_admin() ){
-            add_action( 'admin_notices', array( &$this, 'admin_messages') ); 
+            add_action( 'admin_notices', array( &$this, 'admin_messages') );
+            if( isset( $_GET['page'] ) ){
+                $page = sanitize_text_field( $_GET['page'] );
+                if( 'fortyfourwp_opts' == $page ){
+                    add_action( 'admin_notices', array( &$this, 'beta_messages') );
+                }
+            } 
         }
         add_action('wp_ajax_fortyfourwp_hiderating', array( &$this, 'hide_rating') );
     }
@@ -71,6 +77,28 @@ class FORTYFOURWP_notices {
         </script>
         ';
         }
+    }
+
+    function beta_messages() {
+        if (!current_user_can('update_plugins'))
+        return;
+
+        $start_ts   = strtotime( '4/12/2016' );
+        $end_ts     = strtotime( '4/30/2016' );
+        $user_ts    = strtotime( date('m/d/Y') );
+        $show       = false;
+
+        // Check that user date is between start & end
+        if( (($user_ts >= $start_ts) && ($user_ts <= $end_ts)) ){
+            $show = true;
+        }
+        if( !$show ) return;
+        ?>
+        <div class="fortyfourwp_beta notice notice-info is-dismissible" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);">
+            <p><a href="https://phpbits.net/forty-four-pro-wordpress-now-beta" target="_blank" ><strong><?php _e( 'Join Forty Four Pro Beta now!', 'forty-four' );?></strong></a> 
+            <?php _e( 'Be the first to try the new upgraded features and get 75% OFF your regular license for your valuable feedback. Thank you!', 'forty-four' );?> - <a href="https://phpbits.net/forty-four-pro-wordpress-now-beta" target="_blank" ><?php _e( 'more info', 'forty-four' );?></a> </p>
+        </div>
+        <?php
     }
 }
 new FORTYFOURWP_notices();

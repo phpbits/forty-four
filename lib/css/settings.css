@@ -116,3 +116,6 @@ span.fortyfourwp-total-visits{
 span.fortyfourwp-total-visits span{
 	font-weight: 700;
 }
+.fortyfourwp_beta a{
+	text-decoration: none;
+}
