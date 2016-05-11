@@ -114,9 +114,9 @@ class FORTYFOURWP_API_Settings {
 			<div id="side-info-column" class="inner-sidebar">
 				<?php do_meta_boxes( $this->pagehook . '_' . $this->current_tab, 'side', $this->general_settings ); ?>
 				<div class="fortyfourwp-banners">
-					<p><a href="https://phpbits.net/plugin/forty-four/" target="_blank"><img src="<?php echo plugins_url('/lib/images/banner-pro.jpg', dirname(__FILE__) )?>" /></a></p>
+					<p><a href="https://phpbits.net/plugin/forty-four/?utm_source=sidebar-v1&utm_medium=banner&utm_campaign=forty-four" target="_blank"><img src="<?php echo plugins_url('/lib/images/banner-pro.jpg', dirname(__FILE__) )?>" /></a></p>
 					<p><a href="https://wordpress.org/plugins/widget-options/" target="_blank"><img src="<?php echo plugins_url('/lib/images/banner-widget-options.jpg', dirname(__FILE__) )?>" /></a></p>
-					<p><a href="https://phpbits.net/plugin/mobi/" target="_blank"><img src="<?php echo plugins_url('/lib/images/banner-mobi.jpg', dirname(__FILE__) )?>" /></a></p>
+					<p><a href="https://phpbits.net/plugin/mobi/?utm_source=sidebar-v1&utm_medium=banner&utm_campaign=forty-four" target="_blank"><img src="<?php echo plugins_url('/lib/images/banner-mobi.jpg', dirname(__FILE__) )?>" /></a></p>
 				</div>
 			</div>
 			<div id="post-body" class="has-sidebar">
