@@ -12,6 +12,7 @@ class FORTYFOURWP_API_Settings {
 	 */
 	private $general_settings_key = 'fortyfourwp_general';
 	private $stat_settings_key = 'fortyfourwp_logs';
+	private $upgrade_settings_key = 'fortyfourwp_upgrade';
 	private $plugin_options_key = 'fortyfourwp_opts';
 	private $plugin_settings_tabs = array();
 
@@ -25,6 +26,7 @@ class FORTYFOURWP_API_Settings {
 		add_action( 'init', array( &$this, 'load_settings' ) );
 		add_action( 'admin_init', array( &$this, 'register_general_settings' ) );
 		add_action( 'admin_init', array( &$this, 'register_stat_settings' ) );
+		add_action( 'admin_init', array( &$this, 'register_upgrade_settings' ) );
 		add_action( 'admin_menu', array( &$this, 'add_admin_menus' ) );
 		add_action( 'admin_init' , array( &$this,'on_load_page' ) );
 		//add filter for WordPress 2.8 changed backend box system !
@@ -90,7 +92,8 @@ class FORTYFOURWP_API_Settings {
 	 */
 	function load_settings() {
 		$this->general_settings = (array) get_option( $this->general_settings_key );
-		$this->stat_settings 		= (array) get_option( $this->stat_settings_key );
+		$this->stat_settings 	= (array) get_option( $this->stat_settings_key );
+		$this->upgrade_settings = (array) get_option( $this->upgrade_settings_key );
 	}
 
 	/*
@@ -113,6 +116,7 @@ class FORTYFOURWP_API_Settings {
 				<div class="fortyfourwp-banners">
 					<p><a href="https://phpbits.net/plugin/forty-four/" target="_blank"><img src="<?php echo plugins_url('/lib/images/banner-pro.jpg', dirname(__FILE__) )?>" /></a></p>
 					<p><a href="https://wordpress.org/plugins/widget-options/" target="_blank"><img src="<?php echo plugins_url('/lib/images/banner-widget-options.jpg', dirname(__FILE__) )?>" /></a></p>
+					<p><a href="https://phpbits.net/plugin/mobi/" target="_blank"><img src="<?php echo plugins_url('/lib/images/banner-mobi.jpg', dirname(__FILE__) )?>" /></a></p>
 				</div>
 			</div>
 			<div id="post-body" class="has-sidebar">
@@ -256,6 +260,14 @@ class FORTYFOURWP_API_Settings {
 						<input type="text" value="<?php echo ( isset( $settings_option['home_text'] ) ) ? $settings_option['home_text'] : '';?>" id="fortyfourwp-home-text" class="widefat" name="<?php echo $this->general_settings_key; ?>[home_text]" />
 					</td>
 				</tr>
+				<tr valign="top">
+					<th scope="row">
+						<label for="fortyfourwp-hidetitle"><?php _e( 'Hide 404 Title', 'forty-four' )?></label>
+					</th>
+					<td>
+						<input type="checkbox" value="1" id="fortyfourwp-hidetitle" name="<?php echo $this->general_settings_key; ?>[remove_title]" <?php echo ( isset( $settings_option['remove_title'] ) ) ? 'checked="checked"' : '';?> /> <small><?php _e( 'Check this option if you do not want to show the 404 Title.', 'forty-four' );?></small>
+					</td>
+				</tr>
 
 			</tbody>
 		</table>
@@ -288,6 +300,38 @@ class FORTYFOURWP_API_Settings {
 				<?php $list_table->display();?>
 			</form>
 
+		</div>
+		<?php
+	}
+
+	/*
+	 * Registers the upgrade settings via the Settings API,
+	 * appends the setting to the tabs array of the object.
+	 */
+	function register_upgrade_settings() {
+		$this->plugin_settings_tabs[ $this->upgrade_settings_key ] = __( 'Pro Features', 'forty-four' );
+
+		register_setting( $this->upgrade_settings_key, $this->upgrade_settings_key );
+		add_settings_section( 'upgrade_section', __( 'Upgrade to Forty Four Pro', 'forty-four' ), array( &$this, 'upgrade_options_section' ), $this->upgrade_settings_key );
+	}
+
+	function upgrade_options_section(){
+		?>
+		<div class="wrap fortyfourwp-upgrade-section">
+			<p><strong><?php _e( 'Get a Fully Feature-Packed 404 Pages and Redirection Plugin for WordPress!', 'forty-four' );?></strong></p>
+				<p><?php _e( 'Aside from the free features already available, you will get the following features. ', 'forty-four' );?></p>
+	            <ul>
+	                <li><span class="dashicons dashicons-yes"></span> <?php _e( 'Branding and Custom Menu', 'forty-four' );?></li>
+	                <li><span class="dashicons dashicons-yes"></span> <?php _e( 'Additional Layout', 'forty-four' );?></li>
+	                <li><span class="dashicons dashicons-yes"></span> <?php _e( 'Google Fonts Typography Option', 'forty-four' );?></li>
+	                <li><span class="dashicons dashicons-yes"></span> <?php _e( 'Detailed Logs', 'forty-four' );?></li>
+	                <li><span class="dashicons dashicons-yes"></span> <?php _e( 'Referrer Logs', 'forty-four' );?></li>
+	                <li><span class="dashicons dashicons-yes"></span> <?php _e( 'Search Keywords', 'forty-four' );?></li>
+	                <li><span class="dashicons dashicons-yes"></span> <?php _e( 'Custom Scripts', 'forty-four' );?></li>
+	                <li><span class="dashicons dashicons-yes"></span> <?php _e( 'and more improvements ...', 'forty-four' );?></li>
+	            </ul>
+	            
+	            <p><strong><a href="https://phpbits.net/plugin/forty-four/" class="widget-opts-learnmore" target="_blank"><?php _e( 'Learn More', 'forty-four' );?> <span class="dashicons dashicons-arrow-right-alt"></span></a></strong></p>
 		</div>
 		<?php
 	}

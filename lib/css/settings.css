@@ -128,3 +128,6 @@ span.fortyfourwp-total-visits span{
 body .fortyfourwp-metabox-holder .inner-sidebar #side-sortables{
 	min-height: 205px;
 }
+.fortyfourwp-upgrade-section a{
+	text-decoration: none;
+}

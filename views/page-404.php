@@ -59,8 +59,11 @@ if( isset( $general_settings['shadow_color'] ) && !empty($general_settings['shad
 		<!-- ========================= CONTENT >> START ========================= -->
 		<div class="container404 <?php if( isset( $general_settings['shadow_on'] ) && !empty($general_settings['shadow_on']) ){ echo 'text-shadow-on'; }?>">
 			<div class="content404">
-				<h1><?php _e( '404', 'forty-four' );?></h1>
-				<hr />
+				<?php if( !isset( $general_settings['remove_title'] ) || ( isset($general_settings['remove_title']) && empty($general_settings['remove_title']) ) ){ ?>
+					<h1><?php _e( '404', 'forty-four' );?></h1>
+					<hr />
+				<?php } ?>
+				
 				<?php echo ( isset( $general_settings['title'] ) ) ? '<h2>'. $general_settings['title'] .'</h2>' : '';?>
 				<?php 
 				if( isset( $general_settings['content'] ) ){
