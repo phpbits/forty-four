@@ -7,12 +7,12 @@ class FORTYFOURWP_notices {
     public function  __construct() {
         if ( is_admin() ){
             add_action( 'admin_notices', array( &$this, 'admin_messages') );
-            if( isset( $_GET['page'] ) ){
-                $page = sanitize_text_field( $_GET['page'] );
-                if( 'fortyfourwp_opts' == $page ){
-                    add_action( 'admin_notices', array( &$this, 'beta_messages') );
-                }
-            } 
+            // if( isset( $_GET['page'] ) ){
+            //     $page = sanitize_text_field( $_GET['page'] );
+            //     if( 'fortyfourwp_opts' == $page ){
+            //         add_action( 'admin_notices', array( &$this, 'beta_messages') );
+            //     }
+            // } 
         }
         add_action('wp_ajax_fortyfourwp_hiderating', array( &$this, 'hide_rating') );
     }
