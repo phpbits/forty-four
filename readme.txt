@@ -3,7 +3,7 @@ Contributors: phpbits
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FMKC2SLPTULP8
 Tags: 404, 404 Page, 404 Redirect, 404 to 301, 301, 301 redirect, 404 seo, custom 404 page, seo redirect, not found, not_found, error redirect
 Requires at least: 4.0
-Tested up to: 4.5
+Tested up to: 4.5.2
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
