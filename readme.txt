@@ -20,31 +20,42 @@ Add a super Lightweight 404 Page aside from automatic 404 to 301 redirect for SE
 * 404s should not be redirected globally to the home page.
 * 404 pages are normal :)
 
-If you want to improve your 404 page handling and avoid SEO effects on your "404 Page Not Found" links install this plugin and it'll take care of your 404s ;)
+If you want to improve your WordPress 404 page handling and avoid SEO effects on your "404 Page Not Found" links, just install this WordPress 404 plugin and it'll take care of your 404s ;)
 
 <h3>Why does Forty Four stand out from the rest?</h3>
 
-<strong>Super Lightweight 404 Page</strong><br />
+<strong>Super Lightweight WordPress 404 Page</strong><br />
 Forty Four Plugin creates custom page design that you can modify easily on <em>Appearance > 404 Page</em>. It doesn't load the unnecessary scripts, css, images and other links to 404 page. Visitors shouldn't have to wait too long for the page to load if it's not available! By doing this approach you'll lessen the requests and loading time. 
 
-<strong>Modern 404 Page Design</strong><br />
+<strong>Modern Custom 404 Page Design</strong><br />
 If you want better, responsive and modern 404 page design you should definitely install Forty Four! Of course you can upload your own background image and change the color scheme! Time to ditch your default theme 404 page ;)
 
 <strong>Visit Logs</strong><br />
 All 404 links visited on your sites are available on <em>Appearance > 404 Page: Logs</em>. You can check the 404 links and how many times the pages were viewed. 
 
 <strong>Custom Redirects</strong><br />
-You can also add custom redirect for each links on <em>Appearance > 404 Page: Logs</em>. Not just 301 which is very recommended for SEO purposes, 302 and 307 redirect type is also available.
+You can also add custom redirect for each links on <em>Appearance > 404 Page: Logs</em>. Not just 301 which is very recommended for SEO purposes, 302 and 307 redirect type is also available. There's no need for additional WordPress 404 to 301 Plugin!
 
-<strong>and more!</strong><br />
-There are already upcoming features under development. Will be very happy to hear your suggestions too!
+<blockquote>
+<p><strong><em>Looking for more features?</em></strong> Upgrade to <a href="https://phpbits.net/plugin/forty-four/" target="_blank">Forty-Four Pro</a> to get the complete WordPress 404 Plugin Features.</p>
+<ul>
+<li>Logo Branding</li>
+<li>Modern Pop-up Menu</li>
+<li>Additional 404 Page Layout</li>
+<li>Google Fonts Typography Option</li>
+<li>More Detailed WordPress 404 Logs</li>
+<li>User Searched Keyword Logs</li>
+<li>WordPress 404 Page Visit Referrers</li>
+<li>Custom Scripts Option</li>
+</ul>
+</blockquote> 
 
 If you like to contribute, report issue or have suggestions, you can find the development version on <a href="https://github.com/phpbits/forty-four" target="_blank">Github</a>.
 
 <strong>More information</strong>
 
 * Follow the developer <a href="https://twitter.com/phpbits" target="_blank">@Twitter</a>
-* Other <a href="https://profiles.wordpress.org/phpbits/#content-plugins">WordPress plugins</a>
+* Other <a href="https://phpbits.net/plugins/">WordPress plugins</a>
 
 == Installation ==
 
@@ -67,6 +78,11 @@ e.g.
 
 
 == Changelog ==
+
+= 1.2 =
+* Add Option to hide 404 Title
+* Add Upgrade Tabs and custom banners
+* Update Description
 
 = 1.3 =
 * Fix Saving issue with redirect url thanks to @davebon for reporting
